@@ -19,7 +19,7 @@
 
 //
 //  MainViewController.h
-//  RIV-TOUR
+//  Riverside Tour Guide
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
@@ -62,31 +62,36 @@
 }
 
 #pragma mark View lifecycle
-- (void)viewWillAppear:(BOOL)animated 
-{
-    // View defaults to full size.  If you want to customize the view's size, or its subviews (e.g. webView),
-    // you can do so here.
-    // handle iOS 7 transparent status bar
-    // according to http://stackoverflow.com/questions/19209781/ios-7-status-bar-with-phonegap
-    //Lower screen 20px on ios 7
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
-        CGRect viewBounds = [self.webView bounds];
-        viewBounds.origin.y = 20;
-        viewBounds.size.height = viewBounds.size.height - 10;
-        self.webView.frame = viewBounds;
-    }
-    [super viewWillAppear:animated];
-}
 
-/*
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    // View defaults to full size.  If you want to customize the view's size, or its subviews (e.g. webView),
+//    // you can do so here.
+//
+//    [super viewWillAppear:animated];
+//}
 - (void)viewWillAppear:(BOOL)animated
 {
-    // View defaults to full size.  If you want to customize the view's size, or its subviews (e.g. webView),
+    // View defaults to full size. If you want to customize the view’s size, or its subviews (e.g. webView),
     // you can do so here.
-
+    
+    NSArray *vComp = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
+    
+    if ([[vComp objectAtIndex:0] intValue] >= 7) { // iOS 7 or above
+        
+        CGRect oldBounds = [self.view bounds];
+        
+        CGRect newWebViewBounds = CGRectMake( 0, -20, oldBounds.size.width, oldBounds.size.height-20 );
+        CGRect newWebViewFrame = CGRectMake(0, 20, oldBounds.size.width, oldBounds.size.height-20);
+        
+        [self.webView setBounds:newWebViewBounds];
+        [self.webView setFrame:newWebViewFrame];
+        
+    }
+    
     [super viewWillAppear:animated];
 }
-*/
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -160,17 +165,7 @@
     return [super getCommandInstance:className];
 }
 
-/*
-   NOTE: this will only inspect execute calls coming explicitly from native plugins,
-   not the commandQueue (from JavaScript). To see execute calls from JavaScript, see
-   MainCommandQueue below
-*/
-- (BOOL)execute:(CDVInvokedUrlCommand*)command
-{
-    return [super execute:command];
-}
-
-- (NSString*)pathForResource:(NSString*)resourcepath;
+- (NSString*)pathForResource:(NSString*)resourcepath
 {
     return [super pathForResource:resourcepath];
 }
