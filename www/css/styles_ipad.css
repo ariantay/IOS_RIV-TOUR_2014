@@ -112,6 +112,24 @@ min-height:100%;
     position: relative;
 }
 
+#home_audioContainer
+{
+	/*bottom: 2px;*/
+	bottom: .6%;
+	display: table;
+    margin: 0 auto;
+	text-align: center;
+	width: 75%;
+	height: 10%;
+	position: relative;
+}
+#home_audioContainer audio{
+    width: 100%;
+    display: table;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
 #home_text_container
 {
 	width: 75%; 
@@ -124,18 +142,6 @@ min-height:100%;
   	/*opacity: 1.0;*/
 	opacity: .8;
   	border-radius: 25px;
-}
-
-#home_audioContainer
-{
-	/*bottom: 2px;*/
-	bottom: .6%;
-	display: table;
-    margin: 0 auto;
-	text-align: center;
-	width: 75%;
-	height: 10%;
-	position: relative;
 }
 
 #tourhome_audioContainer{
