@@ -243,7 +243,13 @@ var app = {
 	},  
 	deg2rad: function (deg) {
 		return deg * (Math.PI/180);
-	},    
+	},
+    iOSversion: function() {
+        if (/iP(hone|od|ad)/.test(navigator.platform)) {
+            var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+            return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
+        }
+    },
     initialize: function() {
 		//alert("all scripts and documents loaded, in app.initialize");
 		console.log("all scripts and documents loaded, in app.initialize");
@@ -251,6 +257,13 @@ var app = {
 		if (parseFloat(window.device.version) === 7.0) {
           document.body.style.marginTop = "20px";
 		}*/
+        console.log("detecting ios version...");
+        var ver = app.iOSversion();
+        if (ver && ver[0] >= 8) {
+            $('#audioContainer audio').width("100px");
+            $('#home_audioContainer audio').width("100px");
+        }
+        console.log("iOS version is " + ver[0]);
 		app.maxage = 0;
 		app.numStatues = 12;
         //app.pageLock = 0;
