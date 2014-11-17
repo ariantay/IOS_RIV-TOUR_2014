@@ -82,17 +82,34 @@ min-height:100%;
 	padding: 0;
 }
 */
+#audioContainer audio{
+    width: 100%;
+    display: table;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+#audioContainer{
+    display: block;
+    margin: 4px auto 4px auto;
+    text-align: center;
+    width: 92%;
+    height: 8%;
+    position: relative;
+}
 #textContainer{
-	width: 95%; 
-	max-height:35%;
-	margin: 0 auto;
-	text-align: left;
-	overflow: auto;
-	background-color:#FFEC9A;
-  	border: 2px solid black;
-  	/*opacity: 1.0;*/
-	opacity: .9;
-  	border-radius: 25px;
+    display: block;
+    width: 92%;
+    max-height: 38%;
+    margin: 0 auto;
+    text-align: center;
+    overflow: auto;
+    background-color:#FFEC9A;
+    border: 2px solid black;
+    /*opacity: 1.0;*/
+    opacity: .9;
+    border-radius: 25px;
+    position: relative;
 }
 
 #home_text_container
@@ -115,15 +132,6 @@ min-height:100%;
 {
 	/*bottom: 2px;*/
 	bottom: .6%;
-	display: table;
-    margin: 0 auto;
-	text-align: center;
-	width: 95%;
-	height: 10%;
-	position: relative;
-}
-
-#audioContainer{
 	display: table;
     margin: 0 auto;
 	text-align: center;
