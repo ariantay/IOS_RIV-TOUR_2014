@@ -15,6 +15,7 @@
     <access origin="*.gstatic.com/*" />
     <access origin="*.google.com/*" />
     <access origin="*.googleusercontent.com/*" />
+    <access origin="*itunes.apple.com/*" />
     <preference name="KeyboardDisplayRequiresUserAction" value="true" />
     <preference name="SuppressesIncrementalRendering" value="true" />
     <preference name="DisallowOverscroll" value="true" />
