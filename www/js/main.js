@@ -115,20 +115,22 @@ $(document).on("pagebeforehide", "#tourpage", function () {
 });
 //SETTINGS EVENTS
 $(document).on("pagebeforeshow", "#settings", function () {
-    cur_page = 0;
-    cur_statue = -1;
-	var language = $('input[name="radio-choice-2"]:checked').val();
-	if (language == 'english'){
-		$('#header h1').html("Settings");
-		$('#settings_legend_1 a').html("Language");
-		$('#settings_legend_2 a').html("Disable Statue Popup");
-		$('#settings_legend_3 a').html("Enable Silent Mode");
-	}else{
-		$('#header h1').html("Ajustes");
-		$('#settings_legend_1 a').html("Idioma");
-		$('#settings_legend_2 a').html("Desactivar Estatua Emergente");
-		$('#settings_legend_3 a').html("Activar Modo Silencioso");
-	}
+   cur_page = 0;
+   cur_statue = -1;
+   var language = $('input[name="radio-choice-2"]:checked').val();
+   if (language == 'english'){
+       $('#header h1').html("Settings");
+       $('#settings_legend_1 a').html("Language");
+       $('#settings_legend_2 a').html("Disable Statue Popup");
+       $('#settings_legend_3 a').html("Enable Silent Mode");
+       $('#settings_legend_4 a').html("Get Riverside Landmarks App");
+   }else{
+       $('#header h1').html("Ajustes");
+       $('#settings_legend_1 a').html("Idioma");
+       $('#settings_legend_2 a').html("Desactivar Estatua Emergente");
+       $('#settings_legend_3 a').html("Activar Modo Silencioso");
+       $('#settings_legend_4 a').html("Obtenga la Aplicación De Monumentos Históricos");
+   }
 });
 $(document).on("pageshow", "#settings", function () {
     navigator.splashscreen.hide();
