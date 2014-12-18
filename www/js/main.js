@@ -16,24 +16,30 @@ $(document).on("pagebeforeshow", "#homepage", function () {
     cur_page = 0;
     var language = $('input[name="radio-choice-2"]:checked').val();
     if (language == 'english'){
-    $('#header h3').html("City of Riverside Tour Guide");
-    $('#map_link span.ui-btn-text').html("Begin Tour");
-    $('#list_link span.ui-btn-text').html("Statue List");
-    $('#settings_link span.ui-btn-text').html("Settings");
-    $('.home_audioFile').attr('src','audio/spirit_eng.mp3');
-    $('#home_title').html("International Spirit of Riverside</br>");
-    $('#home_text').html("Riverside has long maintained a spirit of Internationalism and recognition of its multicultural history.  Going back to Frank Miller, the founder of the Mission Inn, Riverside has hosted dignitaries from countries all over the world and provided leadership on an International scale.  Riverside’s multiculturism has existed for nearly 150 years with large segments of various cultures within its population going back to the 1870s.  For example the Mission Inn hosted Japanese, Russian and European dignitaries, national and important state politicians and celebrities, such as several US presidents, Prince Kaya of Japan, Prince Gustav of Sweden, Booker T. Washington, John Muir, and Amelia Earhart.  The World Affairs Council was started in Riverside at the Mission Inn (and was once attended by John F. Kennedy here) and other international peace and social conferences have been hosted here.</br></br>" +
-                        "Riverside was the first American city to take part in the International Sister City program initiated after World War II. That tradition continues today with a robust and global Sister City program including cities in the countries of Japan, Mexico, Korea, China, India, Ghana and Germany.  The Statues of Main Street Riverside embody this spirit of internationalism with recognition of various significant civil rights and historical leaders, some with international or national significance, and others of prominent local importance.");
+		$('#header h3').html("City of Riverside Tour Guide");
+		$('#map_link span.ui-btn-text').html("Begin Tour");
+		$('#list_link span.ui-btn-text').html("Sites to Visit");
+		$('#settings_link span.ui-btn-text').html("Settings");
+		$('.home_audioFile').attr('src','audio/spirit_eng.mp3');
+		$('#home_title').html("International Spirit of Riverside</br>");
+		$('#home_text').html("Riverside has long maintained a spirit of Internationalism and recognition of its multicultural history.  Going back to Frank Miller, the founder of the Mission Inn, Riverside has hosted dignitaries from countries all over the world and provided leadership on an International scale.  Riverside’s multiculturism has existed for nearly 150 years with large segments of various cultures within its population going back to the 1870s.  For example the Mission Inn hosted Japanese, Russian and European dignitaries, national and important state politicians and celebrities, such as several US presidents, Prince Kaya of Japan, Prince Gustav of Sweden, Booker T. Washington, John Muir, and Amelia Earhart.  The World Affairs Council was started in Riverside at the Mission Inn (and was once attended by John F. Kennedy here) and other international peace and social conferences have been hosted here.</br></br>" +
+							"Riverside was the first American city to take part in the International Sister City program initiated after World War II. That tradition continues today with a robust and global Sister City program including cities in the countries of Japan, Mexico, Korea, China, India, Ghana and Germany.  The Statues of Main Street Riverside embody this spirit of internationalism with recognition of various significant civil rights and historical leaders, some with international or national significance, and others of prominent local importance.");
+		$('.ui-grid-b li.ui-block-a').width('32%');
+		$('.ui-grid-b li.ui-block-b').width('35%');	
+		$('.ui-grid-b li.ui-block-c').width('32%');
     }else{
-    $('#header h3').html("Guía de Turismo de la Ciudad de Riverside");
-    $('#map_link span.ui-btn-text').html("Comenzar");
-    $('#list_link span.ui-btn-text').html("Lista");
-    $('#settings_link span.ui-btn-text').html("Ajustes");
-    $('.home_audioFile').attr('src','audio/spirit_esp.mp3');
-    $('#home_title').html("El Orgullo International de Riverside</br>");
-    $('#home_text').html("Riverside es una ciudad que reconoce su historia multicultural y esta orgullosa de sus relaciones internacionales que mantiene hasta ahora. Todo empezó con el dueño del Mission Inn el señor Frank Miller que invitaba a dignatarios del rededor del mundo a que se hospedaran en este lugar. La riqueza de tantas culturas ha existido por más de 150 años comenzando desde 1870.</br></br>" +
-                        "El Mission Inn ha tenido invitados dignitarios  japoneses, rusos,  y europeos. Otros invitados incluyen políticos nacionales y locales, gente famosa, presidentes de los Estados Unidos, el príncipe Kaya de Japón, el príncipe Gustavo de Suecia, el activista Booker T. Washington, el escritor John Muir, y la primera mujer de aviación Amelia Earhart. La Consejería de los Asuntos Mundiales empezó en Riverside en el Mission Inn y fue asistida por John F. Kennedy una vez. Otras conferencias para paz internacional y otros eventos sociales también tomaron lugar en este sitio.</br></br>" +
-                        "Riverside fue la primera ciudad Americana en participar en el programa de Ciudades Hermanas Internacionales que empezó después de la segunda guerra mundial. Esa tradición continúa hasta este día y más ciudades como Japón, México, Corea, China, India, Ghana, y Alemania son ya miembros de este gran programa. Las estatuas en la calle Main son un símbolo de orgullo internacional que reconocen a varios e importantes líderes de los derechos humanos y de la historia.");
+		$('#header h3').html("Guía de Turismo de la Ciudad de Riverside");
+		$('#map_link span.ui-btn-text').html("Comenzar");
+		$('#list_link span.ui-btn-text').html("Sitios para Visitar");
+		$('#settings_link span.ui-btn-text').html("Ajustes");
+		$('.home_audioFile').attr('src','audio/spirit_esp.mp3');
+		$('#home_title').html("El Orgullo International de Riverside</br>");
+		$('#home_text').html("Riverside es una ciudad que reconoce su historia multicultural y esta orgullosa de sus relaciones internacionales que mantiene hasta ahora. Todo empezó con el dueño del Mission Inn el señor Frank Miller que invitaba a dignatarios del rededor del mundo a que se hospedaran en este lugar. La riqueza de tantas culturas ha existido por más de 150 años comenzando desde 1870.</br></br>" +
+							"El Mission Inn ha tenido invitados dignitarios  japoneses, rusos,  y europeos. Otros invitados incluyen políticos nacionales y locales, gente famosa, presidentes de los Estados Unidos, el príncipe Kaya de Japón, el príncipe Gustavo de Suecia, el activista Booker T. Washington, el escritor John Muir, y la primera mujer de aviación Amelia Earhart. La Consejería de los Asuntos Mundiales empezó en Riverside en el Mission Inn y fue asistida por John F. Kennedy una vez. Otras conferencias para paz internacional y otros eventos sociales también tomaron lugar en este sitio.</br></br>" +
+							"Riverside fue la primera ciudad Americana en participar en el programa de Ciudades Hermanas Internacionales que empezó después de la segunda guerra mundial. Esa tradición continúa hasta este día y más ciudades como Japón, México, Corea, China, India, Ghana, y Alemania son ya miembros de este gran programa. Las estatuas en la calle Main son un símbolo de orgullo internacional que reconocen a varios e importantes líderes de los derechos humanos y de la historia.");
+		$('.ui-grid-b li.ui-block-a').width('28%');
+		$('.ui-grid-b li.ui-block-b').width('43%');	
+		$('.ui-grid-b li.ui-block-c').width('28%');					
     }
     $('.home_audioControl').trigger('load');
 });
@@ -147,9 +153,9 @@ $(document).on("pagebeforeshow", "#statuelist", function () {
     cur_statue = -1;
 	var language = $('input[name="radio-choice-2"]:checked').val();
 	if (language == 'english'){
-		$('#header h1').html("Statue List");
+		$('#header h1').html("Sites to Visit");
 	}else{
-		$('#header h1').html("Lista de Estatuas");
+		$('#header h1').html("Sitios para Visitar");
 	}
 });
 $(document).on("pageshow", "#statuelist", function () {

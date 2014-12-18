@@ -20,6 +20,9 @@ body {
 	top: 0;
 	bottom: 0;
 }
+#home_navigation .ui-btn-text{
+	font-size: 12px;
+}
 /*
 #tourPage{
 height:100%;
